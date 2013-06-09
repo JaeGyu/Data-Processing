@@ -8,15 +8,37 @@ public class Main {
 	}
 
 	private void text() {
-		
+		int a = 1, b = 1;
+		int hap = 2, cnt = 2;
+		int c;
+
+		while (true) {
+			c = a + b;
+			hap = hap + c;
+			cnt = cnt + 1;
+
+			if (cnt < 20) {
+				a = b;
+				b = c;
+			} else {
+				System.out.println(hap);
+				return;
+			}
+		}
 	}
 
 	private void mine() {
+		int c;
+		int a = 1;
+		int b = 1;
+		int hap = 2;
 		
-		int j=1;
-		
-		for(int i=1;i<=20;i++){
-			
+		for (int i = 3; i <= 20; i++) {
+			c = a + b;
+			a = b;
+			b = c;
+			hap = hap + c;
 		}
+		System.out.println(hap);
 	}
 }
